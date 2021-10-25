@@ -1,0 +1,79 @@
+/* it changes the like button and like no in row format  */
+.likebutton {
+  display: flex;
+}
+.likebutton h2 {
+  margin-top: 0.5rem;
+  font-weight: 200;
+  padding-left: 1rem;
+}
+
+/* it change the audio bar and drop down menu in row format */
+.audio_container {
+  display: flex;
+}
+.audio_tag {
+  text-align: center;
+}
+
+/* here the size of audio bar is set to 20 rem */
+audio {
+  margin-left: 1rem;
+  width: 20rem;
+}
+.Song_information {
+  margin-left: 1rem;
+}
+.Drop_menu select {
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+}
+.Song_subtitle {
+  color: red;
+}
+.Song_menu:hover {
+  background-color: antiquewhite;
+  margin: 0;
+  box-shadow: 1px 1px 20px;
+}
+.Song_title {
+  font-weight: bold;
+  font-size: large;
+}
+
+/* this media querry is for less than 760px */
+@media (max-width: 760px) {
+  audio {
+    /* here the size of audio bar decrease */
+    width: 12rem;
+  }
+
+  /* here the size of Title and subtitle change according to the screen preferences */
+  .Song_title {
+    font-weight: bold;
+    font-size: small;
+  }
+  .Song_subtitle {
+    font-size: small;
+  }
+
+  /* here the size of like change according to the screen preferences */
+  .likebutton {
+    font-size: smaller;
+  }
+}
+/* this media querry is for less than 350px */
+@media (max-width: 350px) {
+  /* here the size of audio bar decrease */
+  audio {
+    width: 10rem;
+  }
+}
+/* this media querry is for less than 300px that is smasung fold */
+@media (max-width: 300px) {
+  /* here the size of audio bar decrease */
+  audio {
+    width: 8rem;
+  }
+}

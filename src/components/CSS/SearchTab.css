@@ -1,0 +1,30 @@
+.search_tag {
+  margin: 0;
+  padding: 0.3rem;
+  background-color: rgb(170, 75, 75);
+}
+
+/* here i fixed the size of input field to 30rem */
+.search_tag input {
+  width: 30rem;
+  padding: 0.3rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  text-transform: capitalize;
+}
+.search_tag button {
+  margin-left: 0.5rem;
+  padding: 0.3rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* here the size of the input change to 50% for screen size less than 768px */
+@media (max-width: 768px) {
+  .search_tag input {
+    width: 50%;
+  }
+}

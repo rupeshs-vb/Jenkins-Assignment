@@ -1,0 +1,56 @@
+/* here I used Hover effect to show the Add button Data  */
+
+/* this div is for the logo mark */
+.Add_Songs {
+  color: rgb(170, 75, 75);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.Add_Songs:hover {
+  color: red;
+}
+/* here the input field of song and subtitle is not displayed
+with the help of opacity 0 which make this div invisible */
+.Adding_song {
+  background-color: rgb(235, 125, 125);
+  border: 1rem solid rgb(182, 74, 74);
+  padding: 1rem 2rem;
+  opacity: 0;
+}
+/* here the input field os name and subtitle is displaye while
+hover the the main_div or + logo */
+.main_div:hover .Adding_song {
+  opacity: 1;
+  transition: 0.5s;
+}
+.Adding_song input {
+  width: 20rem;
+  outline: none;
+  border: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 10rem;
+  text-transform: capitalize;
+}
+.Adding_song input:focus {
+  background-color: rgb(241, 153, 153);
+}
+.Adding_song button {
+  border: none;
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 10rem;
+}
+
+/* this querry for less than 768px screen */
+@media (max-width: 768px) {
+  .Adding_song input {
+    width: 90%;
+  }
+}
+@media (max-width: 420px) {
+  .Adding_song {
+    padding: 0.1rem;
+  }
+}

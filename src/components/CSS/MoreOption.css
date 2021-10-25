@@ -1,0 +1,32 @@
+/* here i fixed the size of division 
+   now it will show the delete button 
+   while oly hover the drop down button
+*/
+.Drop_menu {
+  width: 1rem;
+  position: relative;
+}
+.main_button {
+  margin-top: 1rem;
+  margin-left: 0.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* here i hide the delete buttton*/
+.list {
+  padding: 0.3rem 1rem;
+  margin-left: 0.2rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  display: none;
+}
+.list:hover {
+  background-color: red;
+  color: white;
+}
+/* now it while show the delete button in block format */
+.Drop_menu:hover .list {
+  display: block;
+}
