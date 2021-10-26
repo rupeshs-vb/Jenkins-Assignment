@@ -11,13 +11,13 @@ pipeline{
     			sh "npm test" 
     		}
 	    }
-	    stage("build/push"){
+	    stage("build/push"){ 
 	        steps{
 	            sh "docker build -t $image ." //this will build my image 
 	            sh "docker tag $image $registry"
 	            sh "docker push $registry"
-				sh "docker rmi $registry"
-				sh "docker rmi $image"
+				sh "docker rmi -f $registry"
+				sh "docker rmi -f $image"
 	        }
 	    }
 	    stage("deploy"){
