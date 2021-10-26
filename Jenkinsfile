@@ -16,16 +16,16 @@ pipeline{
 	    stage("build/push"){ 
 	        steps{
 
-				/*
-				NOTE:- I logged into my docker with the help of cmd by type "docker login" in cmd 
-				and provide all the credentails there 
-				*/
+			/*
+			NOTE:- I logged into my docker with the help of cmd by type "docker login" in cmd 
+			and provide all the credentails there 
+			*/
 
 	            sh "docker build -t $image ." //this will build my image as songui-image
 	            sh "docker tag $image $registry" //this will create tag with my docker hub id
 	            sh "docker push $registry" //this will push my image into docker hub
-				sh "docker rmi -f $registry" //this will delete my tag image 
-				sh "docker rmi -f $image" // this will delete my image after build
+		    sh "docker rmi -f $registry" //this will delete my tag image 
+		    sh "docker rmi -f $image" // this will delete my image after build
 	        }
 	    }
 		// this is my deploying stage where i pulled the image from docker then run it
