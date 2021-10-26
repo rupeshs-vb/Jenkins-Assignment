@@ -17,6 +17,7 @@ pipeline{
 	            sh "docker tag $image $registry"
 	            sh "docker push $registry"
 				sh "docker rmi $registry"
+				sh "docker rmi $image"
 	        }
 	    }
 	    stage("deploy"){
